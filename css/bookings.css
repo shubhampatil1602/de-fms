@@ -1,0 +1,87 @@
+
+.bookings {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* Heading and two buttons */
+.b-heading-buttons {
+    width: 80%;
+}
+
+.b-heading {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.b-heading h1 {
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Part 2 */
+.b-buttons {
+    display: flex;
+    align-items:start;
+    justify-content: center;
+    height: 15vh;
+}
+
+.b-buttons button {
+    padding: 12px;
+    font-size: 1.2rem;
+    border: none;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+#b-one {
+    color: #fff;
+    background-color: #3f78e0;
+}
+
+#b-two {
+    color: #3f78e0;
+    background-color: #fff;
+}
+
+.b-para-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.b-para, .b-btn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.b-para p {
+    font-size: 1.2rem;
+}
+
+.b-btn button {
+    margin-top: 10px;
+    background-color: #3f78e0;
+    color: #fff;
+    width: 220px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+ 
+.b-btn button:hover {
+    background-color: #518af5;
+    color: #fff;
+    
+}

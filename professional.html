@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register As A Professional</title>
+
+    <!-- Bootstrap css -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+    crossorigin="anonymous"
+    />
+
+    <!-- Swiper css  -->
+    <link rel="stylesheet" href="./css/cdn.jsdelivr.net_npm_swiper@9.4.0_swiper-bundle.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/professional.css">
+</head>
+
+<body>
+
+
+    <!--------------------- Navigation Bar --------------------->
+    <nav class="navbar navbar-expand-lg shadow-5-strong bg-nav">
+        <div class="container .bg-nav">
+          <a class="navbar-brand" href="./index.html">findMeServices</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="openBookings()">My Bookings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="./contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="./professional.html">Register As A Professional</a>
+              </li>
+              <li class="nav-item">
+  
+          <!-- Modal for login -->
+          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"" href="#">Signup |  Login</a> 
+          <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button> -->
+                  
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Welcome</h1>                        
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="hero">
+                <div class="form-box">
+                  <div class="log-reg-heading">
+                    <h2>FindMeServices</h2>
+                  </div>
+                      
+              <div class="button-box">
+                <div id="btn"></div>
+                  <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                  <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                </div>
+            
+              <div class="social-icons">
+                <i class="fa-brands fa-square-facebook" style="color: #275fbe;"></i>
+
+                <img src="./images/google-logo-9808.png" alt="google-logo-9808" srcset="">
+
+                 <i class="fa-brands fa-twitter" style="color: #53b7d0;"></i>
+              </div>
+            
+      <form action="" id="login" class="input-group">
+        <div class="col-md-12 form-in">
+                                
+          <input type="email" class="input-field form-control" id="inputEmail4" placeholder="Email" required> 
+                                
+            <input type="password" class="input-field form-control" id="inputPassword4" placeholder="Password" required>
+        </div>
+            <input type="checkbox" name="" id="" class="check-box"><span>Remember Password</span>
+            <button type="submit" class="submit-btn">Log In</button>
+        </form>
+            
+        <form action="" id="register" class="input-group">
+          <div class="col-md-12 form-in">
+                                
+            <!-- <input type="text" class="input-field form-control" id="" placeholder="User Id" required>  -->
+
+            <input type="tel" class="input-field form-control" id="" placeholder="Phone no." required> 
+                            
+            <input type="email" class="input-field form-control" id="inputEmail4" placeholder="Email" required> 
+                                                
+            <input type="password" class="input-field form-control" id="inputPassword4" placeholder="Password" required>
+          </div>
+                
+            <input type="checkbox" name="" id="" class="check-box"><span>I agree to terms & conditions</span>
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+      </div>
+            
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </div>
+            
+                </div>
+              </div>
+            </div>
+  
+        <!-- =======Modal for login over============ -->
+  
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+
+    <!----------------------- Home page ----------------------->
+    <div class="home-page">
+
+        <div class="home-contents">
+
+            <div class="home-title-and-search">
+                <div class="home-title">
+                    <h1>Earn money your way <br>
+                        Expand your <span>service</span> work</h1>
+                </div>
+                <div class="share-wp">
+                    <h4>Share your WhatsApp number and we'll reach out via our WhatsApp business account.</h4>
+                    <form action="search" class="home-form">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" name="phone" placeholder="Your Phone Number">
+                        <button class="bt">Join Us</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!----------------------- Middle ----------------------->
+    <div class="middle">
+        <div class="middle-texts">
+            <div class="h-div">
+                <h3>Flexible work, at your fingertips</h3>
+            </div>
+            <div class="p-div">
+                <p>Find local jobs that fit your skills and schedule. With TaskRabbit, you have the freedom and support to be your own boss.</p>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------- Footer ----------------------->
+    <footer>
+        <div class="footer-parts">
+            <div class="footer-part-one">
+                <div class="about-us">
+                    <h5>About FindMeServices</h5>
+                    <p>FindMeServices, the home services market network, connects homeowners with quality home improvement, repair and maintenance professionals to take care of all your home service needs.</p>
+                </div>
+
+                <div class="discover">
+                    <ul>
+                        <h5>Discover</h5>
+                        <a href="">Explore Services</a>
+                        <a href="">Offers</a>
+                        <a href="./contact.html">Contact Us</a>
+                        <a href="./professional.html">List As Partner</a>
+                        <a href="">How it works</a>
+                        <a href="">Why choose us?</a>
+                        <a href="">Reviews</a>
+                    </ul>
+                </div>
+
+                <div class="account">
+                    <ul>
+                        <h5>Account</h5>
+                        <a href="" onclick="openBookings()">My bookings</a>
+                        <a href="">Login</a>
+                        <a href="">Signup</a>
+                    </ul>
+                </div>
+
+                <div class="need-help">
+                    <ul>
+                        <h5>Need Help Finding A Professional?</h5>
+                        <a>contact@FindMeServices.com</a>
+                        <a>+91 0000000000</a>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-part-two">
+
+                <div class="copyright">
+                    <p>&copy; 2023 FindMeServices. All Rights Reserved.
+                </div>
+
+                <div class="follow">
+                    <p>Follow us! We're friendly: <i class="fa-brands fa-square-facebook" style="color: #4ca1d6;"></i> | <i class="fa-brands fa-twitter" style="color: #41bde6;"></i> | <i class="fa-brands fa-instagram" style="color: #ee68c4;"></i></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+        
+
+    <!-- ================================================ -->
+  
+
+    <!-- Bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/8a1bd92646.js" crossorigin="anonymous"></script>
+
+    <!-- Swiper js -->
+    <script src="./js/cdn.jsdelivr.net_npm_swiper@9.4.0_swiper-bundle.min.js"></script>
+
+    <!-- js -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

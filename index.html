@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap css -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+    crossorigin="anonymous"
+    />
+
+    <!-- Swiper css  -->
+    <link rel="stylesheet" href="./css/cdn.jsdelivr.net_npm_swiper@9.4.0_swiper-bundle.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+
+    <!--------------------- Navigation Bar --------------------->
+    <nav class="navbar navbar-expand-lg shadow-5-strong bg-nav">
+        <div class="container .bg-nav">
+          <a class="navbar-brand" href="./index.html">findMeServices</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="openBookings()">My Bookings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="./contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="./professional.html">Register As A Professional</a>
+              </li>
+              <li class="nav-item">
+  
+          <!-- Modal for login -->
+          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"" href="#">Signup |  Login</a> 
+          <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button> -->
+                  
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Welcome</h1>                        
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="hero">
+                <div class="form-box">
+                  <div class="log-reg-heading">
+                    <h2>FindMeServices</h2>
+                  </div>
+                      
+              <div class="button-box">
+                <div id="btn"></div>
+                  <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                  <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                </div>
+            
+              <div class="social-icons">
+                <i class="fa-brands fa-square-facebook" style="color: #275fbe;"></i>
+
+                <img src="./images/google-logo-9808.png" alt="google-logo-9808" srcset="">
+
+                 <i class="fa-brands fa-twitter" style="color: #53b7d0;"></i>
+              </div>
+            
+      <form action="" id="login" class="input-group">
+        <div class="col-md-12 form-in">
+                                
+          <input type="email" class="input-field form-control" id="inputEmail4" placeholder="Email" required> 
+                                
+            <input type="password" class="input-field form-control" id="inputPassword4" placeholder="Password" required>
+        </div>
+            <input type="checkbox" name="" id="" class="check-box"><span>Remember Password</span>
+            <button type="submit" class="submit-btn">Log In</button>
+        </form>
+            
+        <form action="" id="register" class="input-group">
+          <div class="col-md-12 form-in">
+                                
+            <!-- <input type="text" class="input-field form-control" id="" placeholder="User Id" required>  -->
+
+            <input type="tel" class="input-field form-control" id="" placeholder="Phone no." required> 
+                            
+            <input type="email" class="input-field form-control" id="inputEmail4" placeholder="Email" required> 
+                                                
+            <input type="password" class="input-field form-control" id="inputPassword4" placeholder="Password" required>
+          </div>
+                
+            <input type="checkbox" name="" id="" class="check-box"><span>I agree to terms & conditions</span>
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+      </div>
+            
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </div>
+            
+                </div>
+              </div>
+            </div>
+  
+        <!-- =======Modal for login over============ -->
+  
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+    <!----------------------- Home page ----------------------->
+    <div class="home-page">
+
+        <div class="home-contents">
+
+            <div class="home-title-and-search">
+                <h1>Connect with experts <br>
+                    to make life <span>easier</span></h1>
+                <form action="search" class="home-form">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="How can we help?">
+                    <button class="bt">Search</button>
+                </form>
+            </div>
+
+            <div class="popular">
+                <div class="popular-services">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fast, easy way to find exceptional service experts -->
+    <!-- <section class="components" id="components">
+        <h2>Fast, easy way to find exceptional service experts</h2>
+        
+        <ul class="cards">
+          <li class="card" style="padding: 20px;">
+            <img class="top" src="../de-fms/img/post-requirements.png" alt="img1">
+            <h3>Multiple Options</h3>
+            <p>Get matched with the best experts near you.</p>
+          </li>
+          <li class="card" style="padding: 16px;">
+            <img class="top" src="./img/rates.png" alt="img2">
+            <h3>Compare and save more</h3>
+            <p>Compare and choose a pro that suits your need and budget.</p>
+          </li>
+          <li class="card" style="padding: 20px;">
+            <img class="top" src="./img/save-time-money.png" alt="img3">
+            <h3>Save Time & Money</h3>
+            <p>Save on your service needs with best possible offers.</p>
+          </li>
+          
+         
+        </ul>
+      </section>
+  
+      <hr> -->
+
+    <!---------------------- Our Services ---------------------->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <p>Explore our wide range of services.</p>
+        <ul class="cards">
+
+          <li class="card">
+            <img src="./images/1.jpg" alt="move">
+            <h3>AC Service and Repair</h3>
+            <p><i class="fa-solid fa-tags fa-rotate-90 fa-xs"></i> Starting at: ₹999</p>
+          </li>
+
+          <li class="card">
+            <img src="./img/plumbing.jpg" alt="plum">
+            <h3>Plumbing Repairs</h3>
+            <p><i class="fa-solid fa-tags fa-rotate-90 fa-xs"></i> Service Starts at ₹199</p>
+          </li>
+  
+          <li class="card">
+            <img src="./img/electrician.jpg" alt="elec">
+            <h3>Electrician</h3>
+            <p><i class="fa-solid fa-tags fa-rotate-90 fa-xs"></i> Avg. Price Starts from: ₹249</p>
+          </li>
+  
+          <li class="card">
+            <img src="./img/comp-repair.jpg" alt="comp">
+            <h3>Electronics & Appliances</h3>
+            <p><i class="fa-solid fa-tags fa-rotate-90 fa-xs"></i> Avg. Price Starts from: ₹449</p>
+          </li>
+
+          <li class="card">
+            <img src="./img/mech.jpg" alt="furniture">
+            <h3>Mechanic Service</h3>
+            <p><i class="fa-solid fa-tags fa-rotate-90 fa-xs"></i> Avg. Price Starts at: ₹499</p>
+          </li>
+  
+          <li class="card">
+            <img src="./img/mount-tv.jpg" alt="mount">
+            <h3>Mount a TV, art or shelves</h3>
+            <p><i class="fa-solid fa-tags fa-rotate-90 fa-xs"></i> Avg. Price: ₹499</p>
+          </li>
+  
+          <li class="card">
+            <img src="./img/home-cleaning.jpg" alt="cleaning">
+            <h3>House Cleaning</h3>
+            <p><i class="fa-solid fa-tags fa-rotate-90 fa-xs"></i> Up to 20% off</p>
+          </li>
+  
+          <li class="card">
+            <img src="./img/salon.jpg" alt="salon">
+            <h3>Salon</h3>
+            <p><i class="fa-solid fa-tags fa-rotate-90 fa-xs"></i> Haircut Starts at: ₹199</p>
+          </li>
+
+          
+          
+        </ul>
+      </section>
+
+      <!-------------------- Why choose us -------------------->
+      <div class="why-choose-us">
+
+        <div class="wcu-contents">
+  
+          <div class="wcu-heading">
+            <h2>Why Choose Us?</h2>
+          </div>
+  
+          <div class="wcu-boxes">
+          <div class="wcu-box">
+            <div class="wcu-box-title" style="background-color: rgb(255, 227, 215); color: #804042;">
+              Our Experts
+            </div>
+            <p>Background Verified Experts</p>
+          </div>
+  
+          <div class="wcu-box">
+            <div class="wcu-box-title" style="background-color: #dff9e8; color: #469862;">
+              Price Worthy
+            </div>
+            <p>Standard Pricing</p>
+          </div>
+  
+          <div class="wcu-box">
+            <div class="wcu-box-title" style="background-color: #fffabb; color: #f4cf11;">
+              Our Gurantee
+            </div>
+            <p>Service fulfillment Guarantee</p>
+          </div>
+  
+          <div class="wcu-box">
+            <div class="wcu-box-title" style="background-color: #d9eafb; color: #3e9eff;">
+              Support
+            </div>
+            <p>We are with you</p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+    <!---------------------- How it works ---------------------->
+
+    <div class="how-it-works">
+        <div class="hiw">
+            <div class="hiw-heading">
+                <h2>How it works</h2>
+            </div>
+
+            <div class="hiw-boxes">
+                <div class="hiw-b">
+                    <i class="fa-regular fa-message"></i>
+                    <h3>Tell us what your home needs</h3>
+                    <p>From routine maintenance and repairs to dream home renovations, we can help with any project — big or small.</p>
+                </div>
+
+                <div class="hiw-b">
+                    <i class="fa-regular fa-face-smile-beam"></i>
+                    <h3>We’ll match you with personalized solutions</h3>
+                    <p>See your price and book services in an instant. Or, request and compare quotes from highly rated pros near you.</p>
+                </div>
+
+                <div class="hiw-b">
+                    <i class="fa-sharp fa-regular fa-envelope-open"></i>
+                    <h3>Start to finish, we’ve got you covered</h3>
+                    <p>When you book and pay with FindMeServices, you’re covered by our Happiness Guarantee. We’ll cover your projects up to full purchase price, plus limited damage protection.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--------------- Every day life made easier --------------->
+    <div class="adv-card">
+        <div class="adv-card-text">
+          <h2>Everyday life made easier</h2>
+        <p>When life gets busy, you don’t have to tackle it alone. Get time back for what you love without breaking the bank.</p>
+  
+        <ul class="adv-ul">
+          <li class="adv-li">
+            Choose your Tasker by reviews, skills, and price
+          </li>
+  
+          <li class="adv-li">
+            Schedule when it works for you — as early as today
+          </li>
+  
+          <li class="adv-li">
+            Chat, pay, tip, and review all through one platform
+          </li>
+        </ul>
+  
+        </div>
+        <div class="adv-card-image">
+          <img src="./images/adv-1.jpg" alt="Card Image">
+        </div>
+    </div>
+  
+    <!-- Part2 -->
+
+    <div class="adv-card">
+        <div class="adv-card-image">
+          <img src="./img/adv.jpg" alt="Card Image">
+        </div>
+        <div class="adv-card-text">
+          <h2>Your Happiness, Guaranteed</h2>
+        <p>Your happiness is our goal. If you’re not happy, we’ll work to make it right. Our friendly customer service agents are available 24 hours a day, 7 days a week. This feature is only applies when you book and pay for a service.</p>
+  
+  
+        </div>
+    </div>
+
+    <!---------------------- Testimonials ---------------------->
+    <section class="containerr">
+        <h2>Reviews</h2>
+        <div class="testimonial mySwiper">
+          <div class="testi-content swiper-wrapper">
+            <div class="slide swiper-slide">
+              <img src="./images/double-quotes1.png" alt="" class="image" />
+              <p>
+                “Great job by Daksh, cleaning up a couple of resistant stains from my couch! He was gracious, friendly and gave clear instructions on how to deal with the couch after it's been cleaned. This is a great company and I'd use it again.
+              </p>
+  
+              <div class="details">
+                <span class="name">Raju Singh</span>
+                <span class="job">Silvassa</span>
+              </div>
+            </div>
+            <div class="slide swiper-slide">
+                <img src="./images/double-quotes1.png" alt="" class="image" />
+              <p>
+                "I recently booked an electrician from FindMeServices, and I couldn't be happier with the experience. The electrician arrived on time, was courteous, and demonstrated great professionalism throughout the job. They quickly diagnosed and fixed the electrical issue in my home, ensuring everything was safe and working perfectly. I highly recommend their services."
+              </p>
+  
+              <div class="details">
+                <span class="name">Haresh Patel</span>
+                <span class="job">Vapi</span>
+              </div>
+            </div>
+            <div class="slide swiper-slide">
+                <img src="./images/double-quotes1.png" alt="" class="image" />
+              <p>
+                "I recently used Cleaning Service for my home cleaning from FindMeServices, and I am extremely satisfied with their service. The cleaners arrived on time, were professional and courteous. They did a thorough job, leaving my house spotless. I highly recommend their services!"
+              </p>
+  
+              <div class="details">
+                <span class="name">Sahil Bagul</span>
+                <span class="job">Daman</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next nav-btn"></div>
+          <div class="swiper-button-prev nav-btn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+    <!------------------ Ready to get started ------------------>
+    <div class="ready-to-get-started">
+        <div class="ready">
+            <h3>Ready to get started?</h3>
+            <div class="ready-cards">
+                <div class="r-card r-card1">
+                    <div class="r-c">
+                        <img src="./images/client-sign-up-img.png" alt="">
+                        <p>Hear that? The sweet sigh of relief. Start getting more done.</p>
+                        <button type="submit">Sign Up</button>
+                    </div>
+                </div>
+
+                <div class="r-card">
+                    <div class="r-c">
+                        <img src="./images/become-a-tasker-img.png" alt="">
+                        <p>Grow your own business while saving the day for busy neighbors.</p>
+                        <button type="submit"><a href="./professional.html" style="color: #fff; text-decoration: none;">Register As A Pro.</a></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+  
+    <!----------------------- Footer ----------------------->
+    <footer>
+        <div class="footer-parts">
+            <div class="footer-part-one">
+                <div class="about-us">
+                    <h5>About FindMeServices</h5>
+                    <p>FindMeServices, the home services market network, connects homeowners with quality home improvement, repair and maintenance professionals to take care of all your home service needs.</p>
+                </div>
+
+                <div class="discover">
+                    <ul>
+                        <h5>Discover</h5>
+                        <a href="">Explore Services</a>
+                        <a href="">Offers</a>
+                        <a href="./contact.html">Contact Us</a>
+                        <a href="./professional.html">List As Partner</a>
+                        <a href="">How it works</a>
+                        <a href="">Why choose us?</a>
+                        <a href="">Reviews</a>
+                    </ul>
+                </div>
+
+                <div class="account">
+                    <ul>
+                        <h5>Account</h5>
+                        <a href="./bookings.html" onclick="openBookings()">My bookings</a>
+                        <a href="">Login</a>
+                        <a href="">Signup</a>
+                    </ul>
+                </div>
+
+                <div class="need-help">
+                    <ul>
+                        <h5>Need Help Finding A Professional?</h5>
+                        <a>contact@FindMeServices.com</a>
+                        <a>+91 0000000000</a>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-part-two">
+
+                <div class="copyright">
+                    <p>&copy; 2023 FindMeServices. All Rights Reserved.
+                </div>
+
+                <div class="follow">
+                    <p>Follow us! We're friendly: <i class="fa-brands fa-square-facebook" style="color: #4ca1d6;"></i> | <i class="fa-brands fa-twitter" style="color: #41bde6;"></i> | <i class="fa-brands fa-instagram" style="color: #ee68c4;"></i></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- ================================================ -->
+  
+
+    <!-- Bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/8a1bd92646.js" crossorigin="anonymous"></script>
+
+    <!-- Swiper js -->
+    <script src="./js/cdn.jsdelivr.net_npm_swiper@9.4.0_swiper-bundle.min.js"></script>
+
+    <!-- js -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
